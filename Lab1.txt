@@ -1,0 +1,319 @@
+//2.2.5
+package cruelSummer;
+import java.util.*;
+public class JingleBell {
+public static void main(String[] args) {
+			// TODO Auto-generated constructor stub
+			Scanner sc=new Scanner(System.in);
+			double a=sc.nextDouble();
+			double b=sc.nextDouble();
+			double sum=a+b;
+			double difference= a-b;
+			double product = a*b;
+			System.out.print(sum+" "+difference+" "+product+" ");
+			if (b!=0) System.out.print(a/b);
+		}
+}
+---------------------------------------------------------------------------------
+//2.2.6:
+//The first-degree equation with one variable
+package cruelSummer;
+import java.util.*;
+public class JingleBell {
+public static void main(String[] args) {
+			// TODO Auto-generated constructor stub
+			Scanner sc=new Scanner(System.in);
+			double a=sc.nextDouble();
+			double b=sc.nextDouble();
+			if (a==0&&b==0) System.out.print("Vo So Nghiem");
+			else if (a==0&&b!=0) System.out.print("Vo Nghiem");
+			else System.out.print("Nghiem la:"+" "+ -b/a);
+		}
+}
+
+//The system of first-degree equations (linear system) with two variables
+package cruelSummer;
+import java.util.*;
+public class JingleBell {
+public static void main(String[] args) {
+			// TODO Auto-generated constructor stub
+			Scanner sc=new Scanner(System.in);
+			double a=sc.nextDouble();
+			double b=sc.nextDouble();
+			double c=sc.nextDouble();
+			double d= sc.nextDouble();
+			double e=sc.nextDouble();
+			double f=sc.nextDouble();
+			double doff=a*e-d*b;
+			double dx=c*e-b*f;
+			double dy=a*f-c*d;
+			if (doff==0&&dx==0) System.out.print("VoSoNghiem");
+			else if (doff==0) System.out.print("VoNghiem");
+			else System.out.print("Phuong trinh co hai nghiem la"+" "+"x="+dx/doff+" "+"y="+dy/doff);
+			
+}
+}
+
+//The second-degree equation with one variable
+package cruelSummer;
+import java.util.*;
+public class JingleBell {
+public static void main(String[] args) {
+			// TODO Auto-generated constructor stub
+			Scanner sc=new Scanner(System.in);
+			double a=sc.nextDouble();
+			double b=sc.nextDouble();
+			double c=sc.nextDouble();
+			double delta=b*b-4*a*c;
+			if (a==0) {
+				if (b==0 && c==0) System.out.print("VoSoNghiem");
+				else if (b==0) System.out.print("VoNghiem");
+				else System.out.print("Nghiem la:"+" "+-c/b);
+			}
+			else {
+				if (delta<0) System.out.print("VoNghiem");
+				else if(delta==0) System.out.print("Nghiem la:"+" "+-b/(2*a));
+				else System.out.print("Hai nghiem lan luot la:"+" "+(-b+Math.sqrt(delta))/(2*a)+" "+(-b-Math.sqrt(delta))/(2*a));
+			}
+			
+}
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+//6.1
+import javax.swing.JOptionPane;
+public class ChoosingOption {
+
+	public static void main(String[] args) {
+		int option = JOptionPane.showConfirmDialog(null,
+				"Do you want to change to the first class ticket?",
+				"Choose an Option",
+				JOptionPane.YES_NO_OPTION,  
+				JOptionPane.QUESTION_MESSAGE);
+		JOptionPane.showMessageDialog(null, "You've chosen: "+ (option==JOptionPane.YES_OPTION?"Yes":"No"));
+		System.exit(0);
+	}
+
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+//6.2
+import java.util.Scanner;
+public class InputFromKeyboard {
+    public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("What's your name?");
+		String strName=keyboard.nextLine();
+		System.out.println("How old are you?");
+		int iAge= keyboard.nextInt();
+		System.out.println("How tall are you (m)?");
+		double dHeight = keyboard.nextDouble();
+		System.out.println("Mrs/Ms. "+ strName + ", "+iAge + " year old. "+"Your height is "+dHeight+".");
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+//6.3
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+//6.4
+import java.util.*;
+public class Daylight {
+ public static void main(String[] args) {
+	 Scanner sc= new Scanner(System.in);
+	 ArrayList<String> arr= new ArrayList<>();
+	 for (int i=1; i<=12; i++) {
+		 switch(i){
+		 case 1:
+			 arr.add("January");
+			 arr.add("Jan.");
+			 arr.add("Jan");
+			 arr.add("1");
+			 break;
+		 case 2:
+			 arr.add("February");
+			 arr.add("Feb.");
+			 arr.add("Feb");
+			 arr.add("2");
+			 break;
+		 case 3:
+			 arr.add("March");
+			 arr.add("Mar.");
+			 arr.add("Mar");
+			 arr.add("3");
+			 break;
+		 case 4:
+			 arr.add("April");
+			 arr.add("Apr.");
+			 arr.add("Apr");
+			 arr.add("4");
+			 break;
+		 case 5:
+			 arr.add("May");
+			 
+			 arr.add("5");
+			 break;
+		 case 6:
+			 arr.add("June");
+			 arr.add("Jun");
+			 arr.add("6");
+			 break;
+		 case 7:
+			 arr.add("July");
+			 arr.add("Jul");
+			 arr.add("7");
+			 break;
+		 case 8:
+			 arr.add("August");
+			 arr.add("Aug.");
+			 arr.add("Aug");
+			 arr.add("8");
+			 break;
+		 case 9:
+			 arr.add("September");
+			 arr.add("Sep");
+			 arr.add("Sept.");
+			 arr.add("9");
+			 break;
+		 case 10:
+			 arr.add("October");
+			 arr.add("Oct.");
+			 arr.add("Oct");
+			 arr.add("10");
+			 break;
+		 case 11:
+			 arr.add("November");
+			 arr.add("Nov.");
+			 arr.add("Nov");
+			 arr.add("11");
+			 break;
+		 case 12:
+			 arr.add("December");
+			 arr.add("Dec.");
+			 arr.add("Dec");
+			 arr.add("12");
+			 break;
+		 }
+	 }
+	 int year;
+	 String month;
+	 do {
+		  month=sc.nextLine();
+		  year=sc.nextInt();
+	 }
+	 while(!arr.contains(month));
+	 switch (month) {
+	 case "January": case "Jan.": case "Jan": case "1":
+		 System.out.print("31");
+		 break;
+	 case "February": case "Feb.": case "Feb": case "2":
+		 if (year % 4 == 0 && !(year % 100 == 0 && year % 400 != 0)) System.out.print("29");
+		 else System.out.print("28");
+		 break;
+	 case "March": case "Mar": case "Mar.": case "3":
+		 System.out.print("31");
+		 break;
+	 case "April": case "Apr.": case "Apr": case "4":
+		 System.out.print("30");
+		 break;
+	 case "May": case "5": case "July": case "Jul": case "7": case "August": case "Aug.": case "Aug": case "8": 
+		 System.out.print("31");
+		 break;
+	 case "June": case "Jun": case "6": case "September": case "Sept.": case "Sep": case "9":
+		 System.out.print("30");
+		 break;
+	 case "October": case "Oct.": case "Oct": case "10": case "December": case "Dec.": case "Dec": case "12":
+		 System.out.print("31");
+		 break;
+	 case "November": case "Nov": case "Nov.": case "11":
+		 System.out.print("30");
+		 break;
+	 }
+ }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+//6.5:
+import java.util.*;
+public class Sort {
+  public static void main(String[] args) {
+	  Scanner sc=new Scanner(System.in);
+	  int n=sc.nextInt();
+	  double[] a=new double[n];
+	  TreeMap<Double,Integer> map= new TreeMap<>();
+	  for (int i=0; i<n; i++) {
+		  a[i]=sc.nextDouble();
+		  if (map.containsKey(a[i])) {
+			  int x= map.get(a[i]);
+			  x++;
+			  map.put(a[i], x);
+		  }
+		  else map.put(a[i], 1);
+		  
+	  }
+	 Set<Map.Entry<Double, Integer>> set=map.entrySet();
+	 for (Map.Entry<Double, Integer> x:set) {
+		 for (int i=1; i<=x.getValue(); i++) System.out.print(x.getKey()+" ");
+	 }
+	  
+  }
+	
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+//6.6:
+import java.util.*;
+public class Mat {
+
+	public static void main(String[] args) {
+    Scanner sc= new Scanner(System.in);
+    int n=sc.nextInt();
+    int m=sc.nextInt();
+	double[][]	a=new double[n][m];
+	double[][]  b=new double[n][m];
+	double[][]  res=new double[n][m];
+	for (int i=0; i<n; i++) {
+		for (int j=0; j<m; j++) a[i][j]=sc.nextDouble();
+	}
+	for (int i=0; i<n; i++) {
+		for (int j=0; j<m; j++) b[i][j]=sc.nextDouble();
+	}
+	for (int i=0; i<n; i++) {
+		for (int j=0; j<m; j++) res[i][j]=a[i][j]+b[i][j];
+	}
+	for (int i=0; i<n; i++) {
+		for (int j=0; j<m; j++) System.out.print(res[i][j]+" ");
+		System.out.print("\n");
+	}
+	}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
